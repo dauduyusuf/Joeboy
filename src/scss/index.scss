@@ -1,0 +1,246 @@
+@import './config';
+
+// PRELOADER
+#preloader {
+	width: 100vw;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	position: fixed;
+	display: grid;
+	z-index: 10;
+	place-content: center;
+	background: radial-gradient(#13173a, #121634, #131735);
+	& > div {
+		transform: scale(1.8);
+	}
+}
+/**  Dot Windmill Preloader **/
+@include preloader;
+
+// HEADER
+header {
+	position: relative;
+	.site-nav {
+		top: 0;
+		width: 100%;
+		padding: 10px 20px;
+		position: absolute;
+		z-index: 2;
+		border-bottom: 1px solid #444;
+		@include flex(space-between);
+		.brand {
+			color: #eee;
+			font-family: Cochin, Georgia, Times, serif;
+			@include heading;
+			@include texthover;
+			&::after {
+				bottom: -1px;
+				margin-left: 1px;
+				background: #ddd;
+				background: $primaryColor;
+			}
+		}
+		.site-menu {
+			@include flex(space-between);
+			display: none;
+			li {
+				padding: 10px;
+				a {
+					color: #fff;
+					letter-spacing: 0.6px;
+					font: {
+						size: 18px;
+						weight: bold;
+					}
+				}
+			}
+			@include pc {
+				display: flex;
+			}
+		}
+		#toggleBtn {
+			color: #fff;
+			cursor: pointer;
+			@include toggleBtn;
+			&.close .line {
+				display: none;
+				width: 40px;
+				margin: 0;
+				position: relative;
+				&:nth-child(1) {
+					display: block;
+					transform: rotate(45deg);
+				}
+				&:nth-child(4) {
+					display: block;
+					bottom: 2px;
+					transform: rotate(-45deg);
+				}
+			}
+			@include pc {
+				display: none;
+			}
+		}
+	}
+	#mobilemenu {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		padding: 25px 10px;
+		padding-top: 90px;
+		background: rgba(17, 17, 17, 0.932);
+		li a {
+			display: block;
+			color: #ddd;
+			font-size: 22px;
+			padding: 13px 25px;
+			letter-spacing: 1px;
+			border-bottom: 1px solid #222;
+			@include texthover;
+		}
+	}
+}
+#intro {
+	height: 70vh;
+	padding: 30px;
+	min-height: 560px;
+	@include flex;
+	justify-content: left;
+	overflow-x: hidden;
+	background: linear-gradient(
+		rgba(2, 0, 19, 0.7),
+		rgba(19, 23, 58, 0.7),
+		rgba(2, 0, 19, 0.7)
+	);
+}
+.intro-text {
+	.glitch.vhs-effect {
+		color: $primaryColor;
+		font-size: 95px;
+		font-weight: bold;
+		font-family: Verdana, sans-serif;
+	}
+	h4 {
+		font-size: 46px;
+	}
+	.social-menu {
+		bottom: 10px;
+		padding: 10px 0;
+		position: absolute;
+		a .fa {
+			@include texthover;
+		}
+	}
+}
+.intro-image {
+	top: 0;
+	bottom: 0;
+	left: 300px;
+	margin: auto;
+	display: none;
+	// position: absolute;
+	// max-width: 500px;
+	min-width: 300px;
+}
+
+// MAIN
+main {
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.95),
+		rgba(0, 1, 5, 0.95),
+		rgba(0, 0, 0, 0.95)
+	);
+}
+main > section {
+	padding: 20px;
+	.heading {
+		font-size: 22px;
+		text-align: center;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		@include heading;
+	}
+}
+#music {
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		img {
+			padding: 3px;
+			max-width: 320px;
+			height: auto;
+		}
+	}
+}
+#gallery {
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		img {
+			padding: 3px;
+			max-width: 320px;
+		}
+	}
+}
+
+// FOOTER
+footer {
+	#backtoTop {
+		@include backtoTop;
+	}
+	.social-menu {
+		padding-left: 20px;
+		.fa {
+			@include texthover;
+		}
+	}
+	#copyright {
+		padding: 5px;
+		text-align: center;
+		background: #111111;
+		p {
+			color: #eee;
+		}
+	}
+}
+
+// MEDIA QUERIES
+@media (max-width: 480px) {
+	body {
+		font-size: 120%;
+	}
+	#intro {
+		padding: 5px;
+		padding-left: 25px;
+	}
+	.intro-text .glitch.vhs-effect {
+		font-size: 70px;
+	}
+}
+@media (min-width: 480px) {
+	body {
+		font-size: 120%;
+	}
+}
+@media (min-width: 680px) {
+	body {
+		font-size: 125%;
+	}
+}
+@media (min-width: 960px) {
+	body {
+		font-size: 130%;
+	}
+}
+@media (min-width: 1120px) {
+	body {
+		font-size: 130%;
+	}
+	main section,
+	footer .content {
+		max-width: 1200px;
+		margin: auto;
+	}
+}
