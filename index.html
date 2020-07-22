@@ -1,158 +1,190 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Css Lib Links -->
-		<link
-			rel="stylesheet"
-			href="./src/lib/font-awesome/css/font-awesome.min.css"
-		/>
-		<link rel="stylesheet" href="./src/lib/aos.css" />
-		<link rel="stylesheet" href="./src/lib/glitch.min.css" />
-		<link rel="stylesheet" href="./src/lib/animate.min.css" />
-		<!-- Custom Css Links -->
-		<link rel="stylesheet" href="./src/css/index.css" />
-		<title>Vutra Digital</title>
-	</head>
 
-	<body>
-		<!------------- preloader ------------->
-		<!-- <div id="preloader">
-			<div>
-				<div class="sbl-sticks-spin"></div>
-			</div>
-		</div> -->
-		<!------------- header ------------->
-		<header>
-			<!-- <nav class="site-nav">
-				<h2><a href="#" class="brand">Joeboy</a></h2> -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Css Lib Links -->
+	<link rel="stylesheet" href="./src/lib/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="./src/lib/aos.css" />
+	<link rel="stylesheet" href="./src/lib/nanogallery2.min.css" />
+	<link rel="stylesheet" href="./src/lib/nanogallery2.woff.min.css" />
+	<link rel="stylesheet" href="./src/lib/glitch.min.css" />
+	<link rel="stylesheet" href="./src/lib/animate.min.css" />
+	<!-- Custom Css Links -->
+	<link rel="stylesheet" href="./src/css/index.css" />
+	<title>Joeboy | Official Website</title>
+</head>
+
+<body>
+	<!------------- preloader ------------->
+	<div id="preloader">
+		<div>
+			<div class="sbl-sticks-spin"></div>
+		</div>
+	</div>
+	<!------------- header ------------->
+	<header>
+		<nav class="site-nav">
 			<!------------- site-menu ------------->
-			<!-- <ul class="site-menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#music" class="navLink">Musics</a></li>
-					<li><a href="#videos" class="navLink">Videos</a></li>
-					<li><a href="#gallery" class="navLink">Gallery</a></li>
-					<li><a href="#updates" class="navLink">Updates</a></li>
-				</ul>
-				<div id="toggleBtn">
-					<div class="line"></div>
-					<div class="line"></div>
-					<div class="line"></div>
-					<div class="line"></div>
-				</div>
-			</nav> -->
-			<!------------- mobile menu ------------->
-			<div id="mobilemenu" class="hide">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#music" class="navLink">Musics</a></li>
-					<li><a href="#videos" class="navLink">Videos</a></li>
-					<li><a href="#gallery" class="navLink">Gallery</a></li>
-					<li><a href="#updates" class="navLink">Updates</a></li>
-				</ul>
+			<ul class="site-menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#music" class="navLink">Music</a></li>
+				<li><a href="#latest-song" class="navLink">Stream Now</a></li>
+				<li><a href="#video" class="navLink">Video</a></li>
+				<li><a href="#gallery" class="navLink">Gallery</a></li>
+			</ul>
+			<div id="toggleBtn">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
 			</div>
-			<!------------- Intro ------------->
-			<section id="intro">
-				<div class="intro-text">
-					<div class="glitch text vhs-effect medium" data-text="Joeboy">
-						Joeboy
+		</nav>
+		<!------------- Intro ------------->
+		<section id="intro">
+			<div class="intro-text">
+				<div class="glitch text vhs-effect medium" data-text="Joeboy">
+					Joeboy
+				</div>
+				<h4>Young Legend</h4>
+				<div class="social-menu">
+					<a href="http://facebook.com/victor.daudu.203" title="facebook"><i class="fa fa-facebook-official">
+						</i></a>
+					<a href="http://wa.me/2340903825460" title="whatsapp link"><i class="fa fa-whatsapp"></i></a>
+					<a href="http://instagram.com/victor_daudu" title="instagram"><i class="fa fa-instagram"></i></a>
+					<a href="http://twitter.com/dauduviktor"><i class="fa fa-twitter-square"
+							title="twitter Account"></i></a>
+				</div>
+			</div>
+			<div class="intro-image hide">
+				<img src="./src/images/joeboy.jpg" alt="" />
+			</div>
+		</section>
+		<!------------- mobile menu ------------->
+		<div id="sideBar" class="hide">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#music" class="navLink">Music</a></li>
+				<li><a href="#video" class="navLink">Video</a></li>
+				<li><a href="#gallery" class="navLink">Gallery</a></li>
+				<li><a href="#latest-song" class="navLink">Stream Now</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-------------- main -------------->
+	<main>
+		<section id="latest-song">
+			<iframe src="https://audiomack.com/embed/song/joeboy/call?background=1" scrolling="no" width="100%"
+				height="252" scrollbars="no" frameborder="0"></iframe>
+			<iframe height="252" src="https://www.youtube.com/embed/ovu4cD7AzoE" frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</section>
+		<!-------------- Music section -------------->
+		<section id="music">
+			<div class="heading">
+				<h2>Music</h2>
+			</div>
+			<div class="content">
+				<div id="song" data-aos="fade-right">
+					<div class="image">
+						<div class="songlinks animated fadeOutDown">
+							<a href="#" target="_blank"><img src="./src/logos/spotify-button.png" alt="" /></a>
+							<a href="#" target="_blank"><img src="./src/logos/tidal-button.png" alt="" /></a>
+							<a href="#" target="_blank"><img src="./src/logos/amazonbtn.png" alt="" /></a>
+							<!-- <a href="#" target="_blank"><img src="./src/logos/itunesbutton.png" alt="" /></a> -->
+						</div>
+						<img src="./src/songs/Joeboy-Call.jpg" alt="" />
 					</div>
-					<h4>Young Legend</h4>
-					<!-- <div id="options"></div> -->
-					<div class="social-menu">
-						<a href="http://facebook.com/victor.daudu.203" title="facebook"
-							><i class="fa fa-facebook-official"> </i
-						></a>
-						<a href="http://wa.me/2340903825460" title="whatsapp link"
-							><i class="fa fa-whatsapp"></i
-						></a>
-						<a href="http://instagram.com/victor_daudu" title="instagram"
-							><i class="fa fa-instagram"></i
-						></a>
-						<a
-							href="http://linkedin.com/in/daudu-victor-11700b19b"
-							title="linkedin Account"
-							><i class="fa fa-linkedin-square"></i
-						></a>
-						<a href="http://twitter.com/dauduviktor"
-							><i class="fa fa-twitter-square" title="twitter Account"></i
-						></a>
+					<div>
+						<h4>Call</h4>
 					</div>
 				</div>
-				<div class="intro-image">
-					<img src="./src/images/beyonce.jpg" alt="" />
+				<div id="song" data-aos="fade-up">
+					<div class="image">
+						<div class="songlinks animated fadeOutDown">
+							<a href="#" target="_blank"><img src="./src/logos/spotify-button.png" alt="" /></a>
+							<a href="#" target="_blank"><img src="./src/logos/tidal-button.png" alt="" /></a>
+							<a href="#" target="_blank"><img src="./src/logos/amazonbtn.png" alt="" /></a>
+							<!-- <a href="#" target="_blank"><img src="./src/logos/itunesbutton.png" alt="" /></a> -->
+						</div>
+						<img src="./src/songs/dontcallmeback.jpg" alt="" />
+					</div>
+					<div>
+						<h4>Don't call me back</h4>
+					</div>
 				</div>
-			</section>
-		</header>
-		<!-------------- main -------------->
-		<main>
-			<section class="latest-song">
-				<iframe
-					src="https://audiomack.com/embed/song/joeboy/call?background=1"
-					scrolling="no"
-					width="100%"
-					height="252"
-					scrollbars="no"
-					frameborder="0"
-				></iframe>
-			</section>
-			<!-------------- Music section -------------->
-			<section id="music">
-				<div class="heading">
-					<h2>Music</h2>
+				<div id="song" data-aos="fade-left">
+					<div class="image">
+						<div class="songlinks animated fadeOutDown">
+							<a href="#" target="_blank"><img src="./src/logos/spotify-button.png" alt="" /></a>
+							<a href="#" target="_blank"><img src="./src/logos/tidal-button.png" alt="" /></a>
+							<a href="#" target="_blank"><img src="./src/logos/amazonbtn.png" alt="" /></a>
+							<!-- <a href="#" target="_blank"><img src="./src/logos/itunesbutton.png" alt="" /></a> -->
+						</div>
+						<img src="./src/songs/Joeboy-Call.jpg" alt="" />
+					</div>
+					<div>
+						<h4>Call</h4>
+					</div>
 				</div>
-				<div class="content">
-					<img src="./src/songs/Joeboy - Call.jpg" alt="" />
-					<img src="./src/images/beyonce.jpg" alt="" />
-					<img src="src/images/rihanna.jpg" alt="" />
-				</div>
-			</section>
-			<!-------------- Videos section -------------->
-			<section id="videos">
-				<div class="heading">
-					<h2>Videos</h2>
-				</div>
-				<div class="content"></div>
-			</section>
-			<!-------------- Gallary section -------------->
-			<section id="gallery">
-				<div class="heading">
-					<h2>Gallery</h2>
-				</div>
-				<div class="content">
-					<img src="./src/images/beyonce.jpg" alt="" />
-					<img src="src/images/rihanna.jpg" alt="" />
-				</div>
-			</section>
-			<!-------------- Updates section -------------->
-			<section id="Updates">
+			</div>
+		</section>
+		<!-------------- Videos section -------------->
+		<section id="video">
+			<div class="heading">
+				<h2>Videos</h2>
+			</div>
+			<div class="content">
+				<iframe data-aos="fade-right" src="https://www.youtube.com/embed/xYD2SQljwJo" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<iframe data-aos="fade-up" src="https://www.youtube.com/embed/hxe6Ly4xfkE" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<iframe data-aos="fade-left" src="https://www.youtube.com/embed/zgdJsp1QOyc" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</section>
+		<!-------------- Gallary section -------------->
+		<section id="gallery">
+			<div class="heading">
+				<h2>Gallery</h2>
+			</div>
+			<div class="content" data-aos="fade-up">
+				<div id="nanogallery2">Loading Photos...</div>
+			</div>
+		</section>
+		<!-------------- Updates section -------------->
+		<!-- <section id="Updates">
 				<div class="heading">
 					<h2>Updates</h2>
 				</div>
 				<div class="content"></div>
-			</section>
-		</main>
-		<!---------------- footer ------------->
-		<footer>
-			<div id="backtoTop"><i class="fa fa-angle-double-up"></i></div>
-			<div id="copyright">
-				<p>
-					Designed by Daudu Yusuf(
-					<a href="#" target="_blank">@yusuf_codes</a> ) @2020.
-				</p>
-			</div>
-		</footer>
+			</section> -->
+	</main>
+	<!---------------- footer ------------->
+	<footer>
+		<div id="backtoTop"><i class="fa fa-angle-double-up"></i></div>
+		<div id="copyright">
+			<p>
+				Designed by Daudu Yusuf (
+				<a href="#" target="_blank">@yusuf_codes</a> )
+			</p>
+		</div>
+	</footer>
 
-		<!-- Js Lib Scripts -->
-		<script src="./src/lib/jquery.min.js"></script>
-		<script src="./src/lib/glitch.min.js"></script>
-		<script src="./src/lib/typewriter.js"></script>
-		<script src="./src/lib/InstagramFeed.min.js"></script>
-		<script src="./src/lib/aos.js"></script>
-		<script src="./src/lib/animatescroll.min.js"></script>
-		<script src="./src/lib/animate.min.js"></script>
-		<!-- Custom Scripts -->
-		<script src="index.js"></script>
-	</body>
+	<!-- Js Lib Scripts -->
+	<script src="./src/lib/jquery.min.js"></script>
+	<script src="./src/lib/glitch.min.js"></script>
+	<script src="./src/lib/typewriter.js"></script>
+	<script src="./src/lib/aos.js"></script>
+	<script src="./src/lib/animatescroll.min.js"></script>
+	<script src="./src/lib/jquery.nanogallery2.min.js"></script>
+	<!-- Custom Scripts -->
+	<script src="index.js"></script>
+</body>
+
 </html>

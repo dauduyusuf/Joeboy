@@ -8,6 +8,14 @@ $primaryColor: #16e673;
 	text-decoration: none;
 	box-sizing: border-box;
 }
+body {
+	font-size: 19px;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -22,17 +30,12 @@ p {
 	color: #fff;
 	line-height: 35px;
 }
-img {
-	width: 100%;
+a {
+	color: $primaryColor;
 }
-body {
-	font-size: 19px;
-	overflow-x: hidden;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-	background: url(../images/rihanna.jpg) no-repeat fixed center;
-	background-size: auto;
-	background-position-y: top;
+img,
+iframe {
+	width: 100%;
 }
 
 // MIXINS
@@ -150,25 +153,25 @@ body {
 	position: fixed;
 	bottom: 50px;
 	right: 40px;
-	border-radius: 50%;
-	background: #11d42e;
+	background: rgba(8, 8, 8, 0.85);
 	display: none;
 	align-items: center;
 	justify-content: center;
 	z-index: 5;
 	cursor: pointer;
-	box-shadow: 0 0 5px 0px #fff, 0 0 9px 1px #11d42e;
+	box-shadow: 0 0 8px #111;
 	.fa {
 		color: #fff;
 		font-size: 50px;
 	}
 }
 @mixin toggleBtn {
-	color: #fff;
+	display: grid;
+	align-content: space-between;
+	position: relative;
 	.line {
 		height: 3px;
 		width: 50px;
-		margin: 6px 0;
 		margin-left: auto;
 		border-radius: 5px;
 		background: #fff;
@@ -191,6 +194,12 @@ body {
 		background-color: darken($color: $primaryColor, $amount: 10%);
 	}
 }
+
+@mixin col-xs {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
 @mixin mobile {
 	@media (max-width: 680px) {
 		@content;
@@ -201,8 +210,13 @@ body {
 		@content;
 	}
 }
-@mixin pc {
+@mixin tablet {
 	@media (min-width: 780px) {
+		@content;
+	}
+}
+@mixin pc {
+	@media (min-width: 1024px) {
 		@content;
 	}
 }
@@ -223,8 +237,8 @@ body {
 .social-menu {
 	.fa {
 		color: #fff;
-		font-size: 22px;
-		padding: 8px 10px;
+		font-size: 30px;
+		padding: 10px 12px;
 		border-radius: 50%;
 		margin: 5px;
 		border: 1px solid #fff;
